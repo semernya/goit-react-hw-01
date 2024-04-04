@@ -2,21 +2,21 @@ import css from "./TransactionHistory.module.css";
 
 export default function TransactionHistory({ transactions }) {
   return (
-    <table>
-      <thead>
+    <table className={css.table}>
+      <thead className={css.head}>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className={css.headContent}>Type</th>
+          <th className={css.headContent}>Amount</th>
+          <th className={css.headContent}>Currency</th>
         </tr>
       </thead>
 
       {transactions.map(({ id, type, amount, currency }) => (
-        <tbody key={id}>
+        <tbody className={css.body} key={id}>
           <tr>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+            <td className={css.bodyContent}>{type}</td>
+            <td className={css.bodyContent}>{amount}</td>
+            <td className={css.bodyContent}>{currency}</td>
           </tr>
         </tbody>
       ))}

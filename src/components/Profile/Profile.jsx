@@ -8,26 +8,26 @@ export default function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={css.card}>
+      <div className={css.userInfo}>
+        <img className={css.logo} src={image} width={100} alt="User avatar" />
+        <p className={css.title}>{name}</p>
+        <p className={css.text}>@{tag}</p>
+        <p className={css.text}>{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={css.list}>
+        <li className={css.listItem}>
+          <span className={css.stat}>Followers</span>
+          <span className={css.statValue}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={css.listItem}>
+          <span className={css.stat}>Views</span>
+          <span className={css.statValue}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={css.listItem}>
+          <span className={css.stat}>Likes</span>
+          <span className={css.statValue}>{likes}</span>
         </li>
       </ul>
     </div>

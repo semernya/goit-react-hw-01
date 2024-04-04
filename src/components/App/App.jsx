@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Profile from "../Profile/Profile";
 import FriendList from "../FriendList/FriendList";
 import TransactionHistory from "../TransactionHistory/TransactionHistory";
@@ -9,7 +8,7 @@ import transactions from "../../transactions.json";
 
 export default function App() {
   return (
-    <>
+    <div>
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -21,6 +20,6 @@ export default function App() {
       <FriendList friends={friends} />
 
       <TransactionHistory transactions={transactions} />
-    </>
+    </div>
   );
 }
