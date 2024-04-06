@@ -21,6 +21,6 @@
   text-transform: capitalize;
 }
 
-.body:nth-child(even) {
+.bodyItem:nth-child(odd) {
     background-color: lightgray;
 }
