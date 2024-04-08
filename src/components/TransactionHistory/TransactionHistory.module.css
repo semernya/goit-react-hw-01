@@ -22,5 +22,5 @@
 }
 
 .bodyItem:nth-child(odd) {
-    background-color: lightgray;
+  background-color: lightgray;
 }
